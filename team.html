@@ -5,29 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Members - My Lab</title>
   <link rel="stylesheet" href="style.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Team Members</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research Fields</a></li>
-        <li><a href="team.html">Team Members</a></li>
-        <li><a href="publications.html">Publications</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Team Members</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research Fields</a></li>
+          <li><a href="team.html">Team Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section>
       <h2>Our Team</h2>
-      <p>Introduce your team members here.</p>
+      <p>Select a CSV file to load the team list.</p>
+      <input type="file" id="teamFile" accept=".csv">
+      <button onclick="loadTable('teamFile','teamTable')">Load</button>
+      <table id="teamTable"></table>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 My Lab</p>
+    <div class="container">
+      <p>&copy; 2023 My Lab</p>
+    </div>
   </footer>
 </body>
 </html>
